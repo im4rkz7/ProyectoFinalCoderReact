@@ -2,24 +2,23 @@ import { useState } from "react"
 import React from 'react';
 import { Card, ButtonGroup } from "react-bootstrap"
 
-const ItemCount = ({initial = 1, stock = 10, onAdd} ) => { //Destructuring of props, initializig default values
+const ItemCount = ({initial = 1, stock = 10, onAdd} ) => { 
     
-    const [count, setCount] = useState(1) //State for count value. 1 by default
+    const [count, setCount] = useState(1) 
 
-    const handleAdd = () => { //Count addition handler
-        //Ternary operator for checking the stock. It will add only if count is less than the current stock
+    const handleAdd = () => { 
         count < stock ? setCount(count + 1) : alert(`No hay stock suficiente, el stock actual es: ${stock}`)
         
     }
 
-    const handleRemove = () => { //Count substraction handler
-        if (count>initial){ //If count is at 1, it wont substract anymore
+    const handleRemove = () => { 
+        if (count>initial){ 
             setCount(count - 1)
         }
         
     }
 
-    const handleAddToCart = () => { //Handler for adding item to cart. Pass current count state as parameter
+    const handleAddToCart = () => { 
         onAdd(count)
     }
 

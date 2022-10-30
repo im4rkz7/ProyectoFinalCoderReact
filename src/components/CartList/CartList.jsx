@@ -3,7 +3,7 @@ import { useCartContext } from "../../context/CartContext"
 
 const CartList = () => {
 
-    const {cartList} = useCartContext() //Import state (array) from cart context
+    const {cartList} = useCartContext() 
     
     return (
         <>

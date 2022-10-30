@@ -12,32 +12,32 @@ import { setOrder, updateStock } from "../helpers/Helpers";
 
 const Cart = () => {
    
-    const {cartList, emptyCart, totalPrice} = useCartContext() //Import context array and functions
-    const [orderId, setOrderId] = useState('') //Order State
+    const {cartList, emptyCart, totalPrice} = useCartContext() 
+    const [orderId, setOrderId] = useState('') 
 
 
-    const saveOrder = async (e, buyerData) => { //Save order function that creates the order information to store in Firestore
+    const saveOrder = async (e, buyerData) => { 
         e.preventDefault()
 
-        const order = {} //empty order object
-        order.buyer =  buyerData //buyer state set by the form
+        const order = {} 
+        order.buyer =  buyerData 
 
 
-        order.items = cartList.map(prod => { //List cartList(array) products and save the properties of interest (product, id, price)
+        order.items = cartList.map(prod => { 
             return {
                 product: prod.title,
                 id: prod.id,
                 price: prod.price
             }
         })
-        order.date = new Date() //Add a date to the order
-        order.total = totalPrice() //Add the total price to the order
+        order.date = new Date() 
+        order.total = totalPrice() 
         
-        setOrder(order) // Set order state with order object
-        .then(resp => setOrderId(resp.id)) //If successful, set order id to show later
+        setOrder(order) 
+        .then(resp => setOrderId(resp.id)) 
         
 
-        updateStock(cartList, emptyCart) //Update stock of items bought
+        updateStock(cartList, emptyCart) 
 
     }
 
@@ -45,7 +45,7 @@ const Cart = () => {
 
     return (
         <>  
-            {/* check if orderId was generated and if so, show */}
+            {}
             <br/>
             {orderId !== '' &&
             <div>

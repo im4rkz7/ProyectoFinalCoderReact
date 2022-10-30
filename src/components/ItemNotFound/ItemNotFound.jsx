@@ -3,7 +3,7 @@ import CardHeader from "react-bootstrap/esm/CardHeader"
 import { Link } from "react-router-dom"
 
 const ItemNotFound = () => {
-    return ( //This is a component that is shown when the item id in the url doesnt match any on the database
+    return ( 
         <>
         <Card className="text-center mx-auto" style={{ width: '30rem' }}>
             <CardHeader>OOPS</CardHeader>

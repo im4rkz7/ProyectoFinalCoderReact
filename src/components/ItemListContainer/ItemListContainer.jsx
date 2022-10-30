@@ -6,19 +6,19 @@ import Loading from "../Loading/Loading";
 import { getProductsFirestore } from "../helpers/Helpers";
 
 const ItemListContainer = ({greeting}) => {
-    const [products, setProducts] = useState([]) // State for products array from database
-    const [loading, setLoading] = useState(true) // State for conditional rendering of Loading component
+    const [products, setProducts] = useState([]) 
+    const [loading, setLoading] = useState(true) 
 
-    const {categoryId} = useParams() //UseParams hook to get the parameters of the route
+    const {categoryId} = useParams() 
 
 
     useEffect(() => { 
-        getProductsFirestore(categoryId) // Pass useParams hook value to the function that brings the firestore document
-        .then(resp => setProducts(resp.docs.map(prod => ({id: prod.id,...prod.data()})))) //Set products and assign the id to each item
-        .catch(err=> console.log(err)) // Check for errors in the previous step
-        .finally(() => setLoading(false)) //Set loading to false to show ItemList component
+        getProductsFirestore(categoryId) 
+        .then(resp => setProducts(resp.docs.map(prod => ({id: prod.id,...prod.data()})))) 
+        .catch(err=> console.log(err)) 
+        .finally(() => setLoading(false)) 
        
-    }, [categoryId]) //useEffect control on mount and every time categoryId changes
+    }, [categoryId]) 
 
     
 

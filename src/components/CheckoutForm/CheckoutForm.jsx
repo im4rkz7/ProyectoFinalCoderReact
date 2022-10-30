@@ -3,31 +3,31 @@ import { FloatingLabel, Form, Row, Col, Card } from "react-bootstrap"
 
 const CheckoutForm = ({saveOrder}) => {
 
-    const [buyerData, setBuyerData] = useState({ //Defining state hook of the buyer data. An object with empty properties as default
+    const [buyerData, setBuyerData] = useState({ 
         name:'', phone:'', email:'' 
     })
 
-    //Creating a handle function for changes in the form fields
+    
     const handleChange = (event) => {
         setBuyerData({
-            ...buyerData, //Dinamic fields and spread operator
+            ...buyerData, 
             [event.target.name]: event.target.value
         })
     }
 
-    //Creating a handle function for submit
+   
     const handleSubmit = (event) => {
 
-        if (buyerData.email !== buyerData.email2){ //Email verification. Prevents user from finishing submission
+        if (buyerData.email !== buyerData.email2){ 
             alert('Sus correos electronicos deben coincidir. Intente denuevo')
         }
         else {
             
-            delete buyerData.email2 //Delete unnecesary verification email property
-            saveOrder(event, buyerData) //Ex ecute save order function. Passing object as a parameter for parent function
+            delete buyerData.email2 
+            saveOrder(event, buyerData) 
 
         }
-        event.preventDefault() //Prevents default behavior of the event
+        event.preventDefault() 
         
     }
 

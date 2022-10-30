@@ -11,15 +11,14 @@ import { Link } from 'react-router-dom';
 
 
 
-const ItemDetail = ({item}) => { //Recieves and destructurates prop
-    const [added, setAdded] = useState(false) //State for conditional rendering of ItemCount component
+const ItemDetail = ({item}) => { 
+    const [added, setAdded] = useState(false) 
 
-    const {addCart} = useCartContext() // Consuming a function of context
+    const {addCart} = useCartContext() 
 
-    const onAdd = (amount) => { //Function that handles adding products to cart. Called with a button 
-        setAdded(true) //Set state for conditional rendering
-        addCart({...item, amount: amount}) //Using addCart function with spread operator to add to existing
-                                            //items in cart. Setting the amount added with ItemCounts data
+    const onAdd = (amount) => { 
+        setAdded(true) 
+        addCart({...item, amount: amount}) 
     }
 
     

@@ -1,0 +1,81 @@
+
+
+
+
+
+.App {
+  text-align: center;
+  
+}
+
+body {
+  background-color: #F6F6F6;
+}
+
+.App-logo {
+  margin-top: 10px;
+  max-height: 100px;
+  max-width: 500px;
+}
+
+
+.App-header {
+
+   
+ 
+  font-size: calc(10px + 2vmin);
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+a {
+  text-decoration: none;
+  color: #EF5C18;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #FDCC9B;
+}
+
+.balanceado {
+  width: 150px;
+  height: 170px
+}
+
+.active {
+  color: #FDCC9B;
+  text-decoration: underline;
+}
+
+.itemCard:hover{
+  background-color: #FDCC9B;
+}
+.itemCard {
+  background-color: white;
+}
+
+.navbar {
+  background-color: white;
+}
+
+.pate {
+  width: 140px;
+  height: 170px
+}
+
+.juguete {
+  width: 150px;
+  height: 150px
+}
+
+.complemento {
+  width: 150px;
+  height: 150px
+}
+
+
+

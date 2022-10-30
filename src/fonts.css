@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Capuche';
+    src: local('CapucheTrial'),
+         url('./fonts/CapucheTrial.otf') format('otf');     
+}
+
+@font-face {
+    font-family: 'angryBirds';
+    src: local('angryBirds'),
+         url('./fonts/angryBirds.ttf') format('ttf');     
+}

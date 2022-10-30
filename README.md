@@ -17,7 +17,7 @@ Luego se **corre el proyecto** con este comando:
 
     npm start
  Esto correra la aplicacion en el puerto 3000, pero de no estar disponible preguntara para correrlo en otro puerto, a lo que debe contestar que si presionando la tecla "y". 
- Terminado todo este proceso, la pagina se abrira automaticamente o puede acceder a ella con el link **[http://localhost:3000/](http://localhost:3000/)** (o el puerto correspondiente) en su navegador.
+ Terminado todo este proceso, la pagina se abrira automaticamente o puede acceder a ella con el link **[http://localhost:3000/](http://localhost:3000/)** (o el puerto correspondiente) en su navegador
 
 
 # Librerías & Dependencias
